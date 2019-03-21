@@ -81,8 +81,30 @@ public class Solution {
             return noFoundNumber;
         }
 
+        final int n = array.length - 1; // 数组长度为n+1，数值范围为1~n
+        int minNum = 1;
+        int maxNum = n;
+        int mid = (minNum + maxNum) / 2;
+        int lessNumberCount;
 
-        return noFoundNumber;
+        while (mid > minNum && mid < maxNum) {
+            lessNumberCount = 0;
+            // 计算数组中的中间数两边数量
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] <= mid) {
+                    lessNumberCount++;
+                }
+            }
+            // 找出重复数字在中间数的哪一边
+            if (lessNumberCount > (mid - minNum + 1)) {
+                maxNum = mid;
+            } else {
+                minNum = mid + 1;
+            }
+            mid = (minNum + maxNum) / 2;
+        }
+
+        return mid;
     }
 
 }
