@@ -14,9 +14,9 @@ public class SolutionTest {
         assertEquals(Solution.solve(null), -1);
         assertEquals(Solution.solve(new int[]{}), -1);
         assertEquals(Solution.solve(new int[]{8}), 8);
-        assertEquals(Solution.solve(new int[]{3,4,5,1,2}), 1);
-        assertEquals(Solution.solve(new int[]{1,2,3,4,5}), 1);
-        assertEquals(Solution.solve(new int[]{1,0,1,1,1}), 0);
-        assertEquals(Solution.solve(new int[]{1,1,1,0,1}), 1);
+        assertEquals(Solution.solve(new int[]{3, 4, 5, 1, 2}), 1);
+        assertEquals(Solution.solve(new int[]{1, 2, 3, 4, 5}), 1);
+        assertEquals(Solution.solve(new int[]{1, 0, 1, 1, 1}), 0);
+        assertEquals(Solution.solve(new int[]{1, 1, 1, 0, 1}), 0);
     }
 }
